@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import Button from './button'
+import Button from '../button'
 import { Award, BellIcon, Code, Download, FileText, FolderOpen, TrendingUp, UserCheck, Users, ChevronDown, HamburgerIcon, MenuIcon } from "lucide-react";
 import Link from 'next/link';
 import MobileNav from './mobile-nav';
@@ -89,7 +89,7 @@ const Navbar = () => {
 
 
             <div className='flex lg:gap-18 md:gap-16 gap-14'>
-                {isOpen && <MobileNav onClose={() => setIsOpen(false)} />}
+                {isOpen && <MobileNav linksData={linksData} onClose={() => setIsOpen(false)} />}
 
                 {/* Logo Section */}
                 <div className='flex items-center gap-2'>
